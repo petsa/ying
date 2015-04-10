@@ -1,11 +1,15 @@
 @charset "UTF-8";
 
+// inline-block
+// 设置inline-block，不支持inline-block实现相似表现的布局
 @mixin inline-block{
 	display: inline-block;
 	*display: inline;
 	*zoom: 1;
 }
 
+// clearfix
+// 普通清浮动方法，兼容全浏览器
 @mixin clearfix{
 	*zoom: 1;
 	&:before,
@@ -19,6 +23,7 @@
 	}
 }
 
+// firefox
 // 针对火狐浏览器打bug
 // @include firefox{.test{padding-bottom:3px;}}
 @mixin firefox {
@@ -27,8 +32,8 @@
   }
 }
 
-// Text overflow
-// 元素可以设置宽度才可应用省略号
+// ellipsis
+// 传入宽度参数，超出宽度显示省略号
 %ellipsis-basic{
   overflow: hidden;
   text-overflow: ellipsis;
@@ -39,14 +44,16 @@
   width:$width;
 }
 
+// min-height
+// 兼容ie6最小高度
 @mixin min-height($height) {
 	min-height: $height;
 	height: auto !important;
 	_height: $height;
 }
 
-
-//黑色背景色半透明
+// bgcolor-alpha
+// 黑色背景色半透明
 @mixin bgcolor-alpha($bgcolor: rgba(0,0,0,.5)){
   color:#fff;
   @if $filter{
@@ -60,7 +67,7 @@
   @include bgcolor-alpha;
 }
 
-// Opacity
+// opacity
 // lte8使用filter兼容
 @mixin opacity($opacity:50) {
   opacity: $opacity / 100;
