@@ -1,0 +1,65 @@
+/** * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/) * http://cssreset.com */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+html {
+  overflow-y: scroll; }
+
+body {
+  font-family: Tahoma, "Microsoft YaHei", sans-serif; }
+  body a {
+    text-decoration: none; }
+    body a:hover {
+      text-decoration: underline; }
+
+.wrap {
+  line-height: 1.5em;
+  margin: 100px auto;
+  width: 800px;
+  padding: 50px;
+  text-align: center;
+  background-color: #ededed;
+  font-size: 16px; }
+  .wrap h1 {
+    font-size: 20px;
+    padding-bottom: 30px;
+    margin: 0 40px;
+    text-align: left; }
+    .wrap h1 em {
+      font-size: 40px;
+      font-weight: bold; }
+  .wrap .desc ul {
+    margin: 0 40px;
+    text-align: left; }
+  .wrap .slogan {
+    padding-top: 20px;
+    color: #999;
+    font-size: 12px;
+    text-shadow: 0 2px 0px #fff; }
+/*# sourceMappingURL=global.css.map */

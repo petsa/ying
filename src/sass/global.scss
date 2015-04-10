@@ -1,0 +1,50 @@
+@charset "UTF-8";
+
+@import "ying/ying";
+
+html {
+    overflow-y: scroll;
+}
+
+body {
+    font-family: Tahoma, "Microsoft YaHei", sans-serif;
+    a {
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+
+.wrap{
+    line-height: 1.5em;
+    h1{
+        font-size: 20px;
+        padding-bottom: 30px;
+        margin: 0 40px;
+        text-align: left;
+        em{
+            font-size: 40px;
+            font-weight: bold;
+        }
+    }
+    margin: 100px auto;
+    width: 800px;
+    padding:  50px;
+    text-align: center;
+    background-color: #ededed;
+    font-size: 16px;
+    .desc{
+        ul{
+            margin: 0 40px;
+            text-align: left;
+        }
+    }
+    .slogan{
+        padding-top: 20px;
+        color: #999;
+        font-size: 12px;
+        text-shadow:  0 2px 0px #fff;
+    }
+}

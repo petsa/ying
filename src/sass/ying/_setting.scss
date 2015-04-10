@@ -1,0 +1,30 @@
+@charset "UTF-8";
+//-----------------------------------------------------	
+// setting scss
+//-----------------------------------------------------	
+
+
+// 开关设置
+//-----------------------------------------------------	
+$lte7:                  true !default; //是否兼容ie6-7
+$filter:                false !default; //是否为ie6-8开启css3滤镜兼容，常用于渐变背景 
+$printStyleSwitch:      false !default; //是否开启打印样式
+
+
+// font相关
+//-----------------------------------------------------	
+$baseFontSize:          14px !default;
+$baseLineHeight:        1.5 !default;
+$baseFontFamily:        "Helvetica Neue", Helvetica, Tahoma, sans-serif !default;
+$fontCn:                "SimSun"; //宋体
+$fontYaHei:             "Microsoft Yahei"; //微软雅黑
+$fontHeiTi:             "SimHei"; //黑体
+
+
+// z-index
+//-----------------------------------------------------	
+$zindexDropdown:        1000 !default;
+$zindexFixedTopbar:     1010 !default;
+$zindexTooltip:         1020 !default;
+$zindexAlert:           1030 !default;
+$zindexModal:           1100 !default;

@@ -1,0 +1,79 @@
+@charset "UTF-8";
+
+@mixin inline-block{
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+}
+
+@mixin clearfix{
+	*zoom: 1;
+	&:before,
+	&:after{
+		content: "";
+		display: table;
+		line-height: 0;
+	}
+	&:after{
+		clear: both;
+	}
+}
+
+// 针对火狐浏览器打bug
+// @include firefox{.test{padding-bottom:3px;}}
+@mixin firefox {
+  @-moz-document url-prefix(){
+    @content;
+  }
+}
+
+// Text overflow
+// 元素可以设置宽度才可应用省略号
+%ellipsis-basic{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; 
+}
+@mixin ellipsis($width:100%) {
+  @extend %ellipsis-basic;
+  width:$width;
+}
+
+@mixin min-height($height) {
+	min-height: $height;
+	height: auto !important;
+	_height: $height;
+}
+
+
+//黑色背景色半透明
+@mixin bgcolor-alpha($bgcolor: rgba(0,0,0,.5)){
+  color:#fff;
+  @if $filter{
+    filter:progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr='#{ie-hex-str($bgcolor)}', endColorstr='#{ie-hex-str($bgcolor)}');
+  }@else{
+    background-color: #333;
+  }
+  background-color:$bgcolor;
+}
+%bgcolor-alpha{
+  @include bgcolor-alpha;
+}
+
+// Opacity
+// lte8使用filter兼容
+@mixin opacity($opacity:50) {
+  opacity: $opacity / 100;
+  @if $filter{
+    filter: alpha(opacity=$opacity);
+  }
+}
+%opacity{
+  @include opacity;
+}
+
+// Reset gradient filters for IE
+%reset-filter{
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+}
+

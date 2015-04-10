@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+// normalize.css
+// Normalize.css is a customisable CSS file that makes browsers render all elements more consistently and in line with modern standards.
+// @import "normalize";
+
+//ying setting ，sass函数使用到的配置常量
+@import "setting";
+
+//ying mixins ，提供快捷sass函数
+@import "mixins";
+
+//ying reset style , 提供重置样式，为非现代浏览器提供更友好样式
+@import "reset";
+
