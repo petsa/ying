@@ -124,10 +124,28 @@
  *   }
  */
 /* 
- * firefox
- * @description
- * 针对火狐浏览器打bug
- * @include firefox{.test{padding-bottom:3px;}}
+ * [triangle 模拟三星形]
+ * @link     [http://www.w3cplus.com/preprocessor/sass-triangle-mixin.html]
+ * @return    [description]
+ * 
+ */
+/* 
+ * [firefox 针对火狐浏览器打bug]
+ * @include     [firefox{.test{padding-bottom:3px;}}]
+ * 
+ */
+/* 
+ * [boxClamp 控制文字行数溢出点点点]
+ * @param     $v [1][默认一行对于点点点结束]
+ * @link     [http://sassmeister.com/gist/599f5d4cbe6d8d108eda]
+ * 
+ */
+/* 
+ * [breakpoint 通过简单的接口使用media响应设备窗口大小，调整样式]
+ * @param     name [description]
+ * @other     [description]
+ * @return    [description]
+ * 
  */
 /**
  * @description
