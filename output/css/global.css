@@ -1,0 +1,59 @@
+@charset "UTF-8";
+@charset "UTF-8";
+@charset "UTF-8";
+@charset "UTF-8";
+body {
+  background-color: #fff;
+}
+html {
+  overflow-y: scroll;
+}
+body {
+  font-family: Tahoma, "Microsoft YaHei", sans-serif;
+  background-color: #000;
+}
+body a {
+  text-decoration: none;
+}
+body a:hover {
+  text-decoration: underline;
+}
+.wrap {
+  line-height: 1.5em;
+  *zoom: 1;
+  margin: 100px auto;
+  width: 800px;
+  padding: 50px;
+  text-align: center;
+  background-color: #ededed;
+  font-size: 16px;
+}
+.wrap:before,
+.wrap:after {
+  content: "";
+  display: table;
+  line-height: 0;
+}
+.wrap:after {
+  clear: both;
+}
+.wrap h1 {
+  font-size: 20px;
+  padding-bottom: 30px;
+  margin: 0 40px;
+  text-align: left;
+}
+.wrap h1 em {
+  font-size: 40px;
+  font-weight: bold;
+}
+.wrap .desc ul {
+  margin: 0 40px;
+  text-align: left;
+}
+.wrap .slogan {
+  padding-top: 20px;
+  color: #999;
+  font-size: 12px;
+  text-shadow: 0 2px 0px #fff;
+}

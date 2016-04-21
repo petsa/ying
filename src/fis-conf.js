@@ -5,11 +5,12 @@ fis.set('project.ignore', ['fis3-conf.js', 'fis-conf.js']);
 /*stylus编译*/
 fis.match('*.styl', {
     parser: fis.plugin('stylus', {
-        sourcemap: true
+        sourcemap: false
     }),
     rExt: '.css'
+}).match('/sass/(**.styl)',{
+	release: '/css/$1'
 }).match('_*.styl', {
     release: false
 });
-
 
