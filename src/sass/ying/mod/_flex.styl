@@ -45,7 +45,7 @@
  *     @include x-flex(1 1 auto);
  *   }
  */
-@mixin x-flex ($values...) {
+@mixin x-flex ($values) {
 	-webkit-box-flex: $values; // Chrome 20-, iOS 6-, Safari 3.1 - 6
 	   -moz-box-flex: $values; // FF 19-
 	    -webkit-flex: $values; // Chrome 21 - 28
@@ -87,16 +87,16 @@
  *     @include x-flex-wrap(wrap);
  *   }
  */
-@mixin x-flex-wrap ($value) {
-	// IE 10
-	@if $value == nowrap {
-		-ms-flex-wrap: none;
-	} @else {
-		-ms-flex-wrap: $value;
-	}
-	-webkit-flex-wrap: $value; // Chrome 20-, iOS 6-, Safari 3.1 - 6
-	        flex-wrap: $value; // FF 28+, Chrome 21+, Opera 12.1, 17+, IE 11
-}
+// @mixin x-flex-wrap ($value) {
+// 	// IE 10
+// 	@if $value == nowrap {
+// 		-ms-flex-wrap: none;
+// 	} @else {
+// 		-ms-flex-wrap: $value;
+// 	}
+// 	-webkit-flex-wrap: $value; // Chrome 20-, iOS 6-, Safari 3.1 - 6
+// 	        flex-wrap: $value; // FF 28+, Chrome 21+, Opera 12.1, 17+, IE 11
+// }
 
 /**
  * @param value
@@ -110,23 +110,23 @@
  *     @include x-align-content(center);
  *   }
  */
- @mixin x-align-content ($value) {
- 	// IE 10
- 	@if $value == flex-start {
- 		-ms-flex-line-pack: start;
- 	} @else if $value == flex-end {
- 		-ms-flex-line-pack: end;
- 	} @else if $value == space-between {
- 		-ms-flex-line-pack: justify;
- 	} @else if $value == space-around {
- 		-ms-flex-line-pack: distribute;
- 	} @else {
- 		-ms-flex-line-pack: $value;
- 	}
-	-webkit-align-content: $value; // Chrome 20-, iOS 6-, Safari 3.1 - 6
-	   -moz-align-content: $value; // FF 19-
-	        align-content: $value; // FF 20+, Chrome 21+, Opera 12.1, 17+, IE 11
- }
+ // @mixin x-align-content ($value) {
+ // 	// IE 10
+ // 	@if $value == flex-start {
+ // 		-ms-flex-line-pack: start;
+ // 	} @else if $value == flex-end {
+ // 		-ms-flex-line-pack: end;
+ // 	} @else if $value == space-between {
+ // 		-ms-flex-line-pack: justify;
+ // 	} @else if $value == space-around {
+ // 		-ms-flex-line-pack: distribute;
+ // 	} @else {
+ // 		-ms-flex-line-pack: $value;
+ // 	}
+	// -webkit-align-content: $value; // Chrome 20-, iOS 6-, Safari 3.1 - 6
+	//    -moz-align-content: $value; // FF 19-
+	//         align-content: $value; // FF 20+, Chrome 21+, Opera 12.1, 17+, IE 11
+ // }
 
 /**
  * @param value
@@ -144,31 +144,31 @@
  *     @include x-flex-direction(row-reverse);
  *   }
  */
- @mixin x-flex-direction ($value) {
-	@if $value == row {
-		-webkit-box-direction: normal;
-		   -moz-box-direction: normal;
-		   -webkit-box-orient: horizontal;
-		      -moz-box-orient: horizontal;
-	} @elseif $value == row-reverse {
-		-webkit-box-direction: reverse;
-		   -moz-box-direction: reverse;
-		   -webkit-box-orient: horizontal;
-		      -moz-box-orient: horizontal;
-	} @elseif $value == column {
-		-webkit-box-direction: normal;
-		   -moz-box-direction: normal;
-		   -webkit-box-orient: vertical;
-		      -moz-box-orient: vertical;
-	} @elseif $value == column-reverse {
-		-webkit-box-direction: reverse;
-		   -moz-box-direction: reverse;
-		   -webkit-box-orient: vertical;
-		      -moz-box-orient: vertical;
-	}
+ // @mixin x-flex-direction ($value) {
+	// @if $value == row {
+	// 	-webkit-box-direction: normal;
+	// 	   -moz-box-direction: normal;
+	// 	   -webkit-box-orient: horizontal;
+	// 	      -moz-box-orient: horizontal;
+	// } @elseif $value == row-reverse {
+	// 	-webkit-box-direction: reverse;
+	// 	   -moz-box-direction: reverse;
+	// 	   -webkit-box-orient: horizontal;
+	// 	      -moz-box-orient: horizontal;
+	// } @elseif $value == column {
+	// 	-webkit-box-direction: normal;
+	// 	   -moz-box-direction: normal;
+	// 	   -webkit-box-orient: vertical;
+	// 	      -moz-box-orient: vertical;
+	// } @elseif $value == column-reverse {
+	// 	-webkit-box-direction: reverse;
+	// 	   -moz-box-direction: reverse;
+	// 	   -webkit-box-orient: vertical;
+	// 	      -moz-box-orient: vertical;
+	// }
 
- 	-webkit-flex-direction: $value;
- 	   -moz-flex-direction: $value;
- 	    -ms-flex-direction: $value;
- 	        flex-direction: $value;
- }
+ // 	-webkit-flex-direction: $value;
+ // 	   -moz-flex-direction: $value;
+ // 	    -ms-flex-direction: $value;
+ // 	        flex-direction: $value;
+ // }

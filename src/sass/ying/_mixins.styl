@@ -1,29 +1,29 @@
 @charset "UTF-8";
 
 //引入其他mixin模块
-@import "mod/flex",// 伸缩盒子
-        "mod/placeholder",//input占位符号
-        "mod/triangle",//三角icon
-        "mod/firefox",//firefox hack
-        "mod/boxclamp",//控制文字行数溢出省略号
-        "mod/breakpoint",//响应式页面断点
-        "mod/rem";//rem单位化
+// @import "mod/_flex"
+// @import "mod/_placeholder"//input占位符号
+// @import "mod/_triangle"//三角icon
+// @import "mod/_firefox"//firefox hack
+// @import "mod/_boxclamp"//控制文字行数溢出省略号
+@import "mod/_breakpoint"//响应式页面断点
+// @import "mod/_rem"//rem单位化
 
 /* 
  * [inline-block 设置inline-block，不支持inline-block实现相似表现的布局]
  * 
  */  
-@mixin inline-block{
-	display: inline-block;
-	*display: inline;
-	*zoom: 1;
+inline-block(){
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
 }
 
 /* 
  * [clearfix 普通清浮动方法，兼容全浏览器]
  * 
  */  
-@mixin clearfix{
+clearfix(){
 	*zoom: 1;
 	&:before,
 	&:after{
@@ -40,55 +40,30 @@
  * [ellipsis 传入宽度参数，超出宽度显示省略号]
  * 
  */  
-%ellipsis-basic{
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap; 
-}
-@mixin ellipsis($width:100%) {
-  @extend %ellipsis-basic;
-  width:$width;
+ellipsis($width) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; 
+    width:$width;
 }
 
 /* 
  * [min-height 兼容ie6最小高度]
  * 
  */  
-@mixin min-height($height) {
+min-height($height) {
 	min-height: $height;
 	height: auto !important;
 	_height: $height;
 }
 
 /* 
- * [bgcolor-alpha 黑色背景色半透明]
- * 
- */  
-@mixin bgcolor-alpha($bgcolor: rgba(0,0,0,.5)){
-  color:#fff;
-  @if $filter{
-    filter:progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr='#{ie-hex-str($bgcolor)}', endColorstr='#{ie-hex-str($bgcolor)}');
-  }@else{
-    background-color: #333;
-  }
-  background-color:$bgcolor;
-}
-%bgcolor-alpha{
-  @include bgcolor-alpha;
-}
-
-/* 
  * [opacity lte8使用filter兼容]
  * 
  */  
-@mixin opacity($opacity:50) {
+opacity($opacity) {
     opacity: $opacity / 100;
-    @if $filter{
-        filter: alpha(opacity=$opacity);
-    }
-}
-%opacity{
-  @include opacity;
+    //filter: alpha(opacity=$opacity);
 }
 
 
@@ -96,7 +71,7 @@
  * [reset-filter Reset gradient filters for IE]
  * 
  */  
-%reset-filter{
-  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
-}
+// %reset-filter{
+//   filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+// }
 
